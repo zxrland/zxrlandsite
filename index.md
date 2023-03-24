@@ -14,7 +14,7 @@
   <!-- ... -->
   <link
     rel="stylesheet"
-    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+    href="https://unpkg.zhimg.com/@waline/client@v2/dist/waline.css"
   />
   <!-- ... -->
 </head>
@@ -22,7 +22,7 @@
   <!-- ... -->
   <div id="waline"></div>
   <script type="module">
-    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    import { init } from 'https://unpkg.zhimg.com/@waline/client@v2/dist/waline.mjs';
 
     init({
       el: '#waline',
