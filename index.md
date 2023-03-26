@@ -1,3 +1,8 @@
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎来到Zxrland的官方网站</title>
+    <link rel="icon" href="https://ivcdn.zxrn.cf/images/favicon.ico">
+</head>
 ## 欢迎来到Zxrland的官方网站
 [网站图片加载速度测试](https://www.zxrn.cf/test/image-test)
 ## FAQ
