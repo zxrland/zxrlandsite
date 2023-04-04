@@ -1,4 +1,6 @@
 ## 欢迎来到Zxrland的官方网站
+## 语言/語言
+[简体中文](https://www.zxrn.cf/) [繁體中文](https://www.zxrn.cf/zh-hant)
 ## 速度测试
 [图片打开速度测试](https://www.zxrn.cf/test/image-test)
 ## 注意！！
