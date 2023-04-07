@@ -7,16 +7,37 @@
 >
 
 <url>
+ <loc>https://www.zxrn.cf/zh-hant</loc>
+ <priority>0.3</priority>
+ <lastmod>2023-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
  <loc>https://www.zxrn.cf/</loc>
  <priority>0.3</priority>
- <lastmod>2023-03-25</lastmod>
+ <lastmod>2023-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://www.zxrn.cf/courses/comment/</loc>
+ <priority>0.3</priority>
+ <lastmod>2023-04-07</lastmod>
  <changefreq>weekly</changefreq>
 </url>
 
 <url>
  <loc>https://www.zxrn.cf/test/image-test</loc>
  <priority>0.3</priority>
- <lastmod>2023-03-25</lastmod>
+ <lastmod>2023-04-07</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://www.zxrn.cf/faq</loc>
+ <priority>0.3</priority>
+ <lastmod>2023-04-07</lastmod>
  <changefreq>weekly</changefreq>
 </url>
 
