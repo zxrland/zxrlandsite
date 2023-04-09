@@ -39,5 +39,4 @@ if (message == '变紫色') { entity.player.color.set(1, 0, 1); world.say(entity
 if (message == '变黄色') { entity.player.color.set(1, 1, 0); world.say(entity.player.name + '变成了黄色') }
 if (message == '变浅蓝色') { entity.player.color.set(0, 1, 1); world.say(entity.player.name + '变成了浅蓝色') }
 if (message == '还原颜色') { entity.player.color.set(1, 1, 1); world.say(entity.player.name + '还原了颜色') }
-if (message == '删除宠物') { entity.setPet(); }
 ```
