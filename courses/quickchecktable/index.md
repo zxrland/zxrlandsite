@@ -1,5 +1,5 @@
 ## 速查表
-`
+```javascript
  if (message == '变大') { entity.player.scale += 3; world.say(entity.player.name + '变大了') }
  if (message == '变小') { entity.player.scale += -3; world.say(entity.player.name + '变小了') }
 if (message == '还原大小') { entity.player.scale = 1; world.say(entity.player.name + '还原了大小') }
@@ -40,4 +40,4 @@ if (message === "天亮") { world.sunPhase = 0.25; entity.player.directMessage('
             if (message == '变浅蓝色') { entity.player.color.set(0, 1, 1); world.say(entity.player.name + '变成了浅蓝色') }
             if (message == '还原颜色') { entity.player.color.set(1, 1, 1); world.say(entity.player.name + '还原了颜色') }
             if (message == '删除宠物') { entity.setPet(); }
-`
+```
