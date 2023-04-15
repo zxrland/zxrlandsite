@@ -8,6 +8,5 @@
 
 2、我发现很多人都不会使用评论区，注册了一些无法使用的账户，清理十分麻烦，因此，我写了一篇评论区使用教程（还未完成）链接：[https://www.zxrn.cf/courses/comment/](https://www.zxrn.cf/courses/comment/)
 ## 代码
-请前往[编程猫岛3官方教程](https://docs.box3.codemao.cn)或[我们自制的速查表]
-
+请前往[编程猫岛3官方教程](https://docs.box3.codemao.cn)
 ### 敬请期待
