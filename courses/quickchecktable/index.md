@@ -41,6 +41,4 @@ if (message == '变浅蓝色') { entity.player.color.set(0, 1, 1); world.say(ent
 if (message == '还原颜色') { entity.player.color.set(1, 1, 1); world.say(entity.player.name + '还原了颜色') }
 ```
 | 指令     |   作用       |
-
 | `entity.player.scale += 3` | 变大       |
-| Paragraph   | Text        |
