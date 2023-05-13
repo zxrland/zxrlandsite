@@ -1,4 +1,5 @@
-## [速查表](这是我们自制的速查表，做的不好请见谅。 "注")
+## 速查表
+这是我们自制的速查表，做的不好请见谅。
 ```javascript
 if (message == '变大') { entity.player.scale += 3; world.say(entity.player.name + '变大了') }
 if (message == '变小') { entity.player.scale += -3; world.say(entity.player.name + '变小了') }
