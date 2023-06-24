@@ -13,7 +13,7 @@
   <!-- ... -->
   <link
     rel="stylesheet"
-    href="https://cdn.bootcdn.net/@waline/client@v2/dist/waline.css"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
   />
   <!-- ... -->
 </head>
@@ -21,7 +21,7 @@
   <!-- ... -->
   <div id="waline"></div>
   <script type="module">
-    import { init } from 'https://cdn.bootcdn.net/@waline/client@v2/dist/waline.mjs';
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
 
     init({
       el: '#waline',
