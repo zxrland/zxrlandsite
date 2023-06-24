@@ -13,7 +13,7 @@
   <!-- ... -->
   <link
     rel="stylesheet"
-    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+    href="https://cdn.bootcdn.net/@waline/client@v2/dist/waline.css"
   />
   <!-- ... -->
 </head>
