@@ -81,4 +81,3 @@ world.onChat(({ entity, message }) => {
     }
 })
 ```
-```
