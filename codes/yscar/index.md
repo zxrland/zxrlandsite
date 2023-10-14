@@ -5,3 +5,4 @@
 ### [second-manager.js](https://www.zxrn.info/codes/yscar/second-manager-js/)
 ### [racer.js](https://www.zxrn.info/codes/yscar/racer-js/)
 ### [other.js](https://www.zxrn.info/codes/yscar/other-js/)
+### [car.js](https://www.zxrn.info/codes/yscar/car-js/)
