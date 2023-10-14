@@ -4,7 +4,7 @@ console.clear()
 require('./time-sun-gui.js')
 require('./car.js')
 require('./manager.js')
-require('./second-manage.js')
+require('./second-manager.js')
 require('./other.js')
 require('./racer.js')
 //黄色条纹：障碍桶，碰到扣三滴血    红色条纹：边缘桶，碰到扣1滴血  绿色条纹：引导桶，碰到不扣血
