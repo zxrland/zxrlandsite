@@ -26,6 +26,7 @@
     init({
       el: '#waline',
       serverURL: 'https://comment.zxrn.info',
+      turnstileKey:'0x4AAAAAAAQMP29tiusykCIZsqB7dsA_U18',
     });
   </script>
 </body>
