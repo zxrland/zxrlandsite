@@ -6,6 +6,9 @@ const moment = require('./moment.js')
 var utcPlus8Hours = null
 
 
+
+
+
 world.onPlayerJoin(({ entity }) => {
     gui.init(entity, {
         "panel": {
@@ -14,6 +17,12 @@ world.onPlayerJoin(({ entity }) => {
             <group percentWidth="100" height="120" y="0">
                 <label text="玩家血量" height="35" y="5"  x="10"  percentWidth="100" color="#fff" fontSize="20"></label>
                 <label text="" height="25" y="35" x="10" percentWidth="100" color="#fff" id="pointshowx"></label>
+            </group>
+            <group percentWidth="100" height="120" y="0">
+                <label text="qq群号：774269122" height="35" y="50"  x="10"  percentWidth="100" color="#fff" fontSize="20"></label>
+            </group>
+            <group percentWidth="100" height="120" y="0">
+                <label text="" height="35" y="80"  x="10" percentWidth="100" color="#fff" id="timehms" fontSize="20"></label>
             </group>
         </dialog>`
         }
@@ -92,10 +101,8 @@ world.onPlayerJoin(({ entity }) => {
         else if (utcPlus8Hours == 23) {
             world.sunPhase = 0.88
         }
-        gui.setAttribute(entity, "#positionshowdx", "text", `X：${~~entity.position.x}`);
-        gui.setAttribute(entity, "#positionshowdy", "text", `Y：${~~entity.position.y}`);
-        gui.setAttribute(entity, "#positionshowdz", "text", `Z：${~~entity.position.z}`);
         gui.setAttribute(entity, "#pointshowx", "text", `${~~entity.maxHp}/${~~entity.hp}`);
+        gui.setAttribute(entity, "#timehms", "text", `目前时间：${moment().utcOffset("+08:00").format('HH时mm分ss秒')}`);
     })
 
 })
