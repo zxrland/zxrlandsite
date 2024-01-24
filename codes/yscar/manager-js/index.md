@@ -1,6 +1,6 @@
 ## manager.js
 ```javascript
-const manager = ['zxr6247', '好奇的土岩龙HHaS','迷失幻境','5星好市民', 'XGY.善良的宇宙兔yh', '机智的小黄鸡C7Pm', '冰封han', '甜甜的小梦x1', '错乱-纪元重生', 'ZiLingKiller', '小逸526', 'Ay.Cyan.Bamboo.','克尼里斯','SEN.陈某文']
+const manager = ['zxr6247', '好奇的土岩龙HHaS','迷失幻境','5星好市民', 'XGY.善良的宇宙兔yh', '机智的小黄鸡C7Pm', '冰封han', '甜甜的小梦x1', '错乱代码', 'ZiLingKiller', '小逸526', 'Ay.Cyan.Bamboo.','-克尼里斯-','SEN.陈某文']
 //const manager = ['zxr6247',  '5星好市民', 'XGY.善良的宇宙兔yh', '冰封han', '甜甜的小梦x1', '错乱-纪元重生-科技与肃清', 'ZiLingKiller','小逸526']
 world.onChat(async ({ entity, message }) => {
     if (!manager.includes(entity.player.name)) return
@@ -230,6 +230,7 @@ board1.onInteract(async ({ entity }) => {
         content: '希望你玩的开心！加油，冲过终点线！'
     });
 });
+//彩蛋
 async function yd() {
     const i = []
     const t = []
@@ -270,5 +271,6 @@ async function yd() {
         await sleep(500)
     }
 }
+
 
 ```
