@@ -1,6 +1,6 @@
 ## second-manager.js
 ```javascript
-let hmd = []  
+let hmd = []
 let ban = (name) => hmd.push(name);
 let je = (name) => hmd.splice(hmd.indexOf(name), 1);
 
@@ -13,7 +13,7 @@ world.onPlayerJoin(({ entity }) => {
     }
 })
 const canfly = []
-const xiedian = ['zxr6247', '好奇的土岩龙HHaS','ZiLingKiller','Ay.Cyan.Bamboo.','克尼里斯','SEN.陈某文','迷失幻境']
+const xiedian = ['zxr6247', '好奇的土岩龙HHaS', 'ZiLingKiller', 'Ay.Cyan.Bamboo.', '-克尼里斯-', 'SEN.陈某文', '迷失幻境']
 //const xiedian = ['zxr6247','ZiLingKiller']
 world.onPlayerJoin(({ entity }) => {
     if (!canfly.includes(entity.player.name)) return;
