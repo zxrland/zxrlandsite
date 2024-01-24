@@ -13,7 +13,8 @@ oiler.onInteract(async ({ entity }) => {
     entity.player.directMessage('油已加满')
 });
 
-//新手教程
+
+//新手教程&Q群
 world.onPlayerJoin(async ({ entity }) => {
     var answer = await entity.player.dialog({
         type: GameDialogType.SELECT,
@@ -118,12 +119,19 @@ world.onPlayerJoin(async ({ entity }) => {
                 content: '希望你玩的开心！加油，冲过终点线！'
             });
         case 3:
-
             var managerhelper = entity.player.dialog({
                 type: GameDialogType.TEXT,
                 tlitle: '系统1号中心-ADF32000bxd',
                 content: `尊敬的管理员，你可以：变大、大小还原、发光、终极发光、飞行、解除飞行、还原颜色、变青、蓝、红、黄、绿、紫、黑、粉、橙、颜色还原、隐身、隐藏名字。显示名字、幽灵、取消幽灵、跳高、反光、金属感、第一人称视角、第三人称视角、下雨、停雨、下雪、停雪、起雾、停雾、取消玩家互相碰撞、允许玩家互相碰撞、瞬移至他人位置、他人瞬移至自己位置。`
             });
     }
+    var qqts = entity.player.dialog({
+        type: GameDialogType.TEXT,
+        title: 'qq群',
+        content: '原始赛车场qq群：774269122'
+    })
 });
+
+
+
 ```
