@@ -1,5 +1,6 @@
 ## racer.js
 ```javascript
+
 const area1 = world.addZone({
     selector: 'player',
     bounds: {
@@ -42,6 +43,46 @@ world.onPlayerJoin(({ entity }) => {
     entity.minTime = Infinity
 })
 
+const phb = world.querySelector('#路牌-1')
+phb.enableInteract = true
+phb.interactHint = '在线排行榜'
+phb.interactColor = new GameRGBColor(1,0,0); 
+phb.onInteract(async ({ entity }) => {
+    pd = [] //排行榜得分
+    pm = [] //排行榜名字
+    world.querySelectorAll('player').forEach((entity) => { //遍历所有玩家
+        pm.push(entity.player.name) //获取玩家名字
+        pd.push(entity.minTime) //获取玩家得分
+    })
+    l = pd.length; //人数
+    m = 0; //
+    t1 = 0; //
+    t2 = 0; //
+    for (i = 0; i < l - 1; i++) {
+        m = i; //i=人数-1
+        for (j = i + 1; j < l; j++) {
+            if (pd[j] < pd[m]) {
+                m = j;
+            }
+        }
+        t1 = pd[i] //t1=排行榜得分的第
+        t2 = pm[i]
+        pd[i] = pd[m]
+        pm[i] = pm[m]
+        pd[m] = t1;
+        pm[m] = t2
+    }
+    p = []
+    for (n = 0; n < pd.length; n++) {
+        p.push("第" + (n + 1) + "名：" + pm[n] + "：时间：" + pd[n])
+    }
+    entity.player.dialog({
+        type: GameDialogType.SELECT,
+        title: "排行榜",
+        content: "已显示在线人员时间排行榜",
+        options: p,
+    })
+});
 world.onChat(({ entity, message }) => {
     if (message == '/leaderboard') {
         pd = [] //排行榜得分
@@ -80,4 +121,5 @@ world.onChat(({ entity, message }) => {
         })
     }
 })
+
 ```
