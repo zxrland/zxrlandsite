@@ -15,17 +15,20 @@ world.onPress(async ({ entity, button }) => {
                     type: GameDialogType.SELECT,
                     title: '菜单',
                     content: '请选择车辆',
-                    options: ['面包车', '货车', '跑车', '卡车', '法拉利F1', '无名红色赛车', '无名白色赛车']
+                    options: ['面包车', '货车', '跑车', '卡车', '法拉利F1', '无名红色赛车', '无名白色赛车', '轿车']
                 })
-                if (select) {
-                    if (select.value == '面包车') {
+                if (!select || select === null) {
+                    return;
+                }
 
+                switch (select.index) {
+                    case 0:
                         entity.maxHp = 10
                         entity.enableDamage = true
                         entity.player.canFly = false;//false;
                         entity.player.invisible = true;
                         entity.player.jumpPower = false
-                        entity.mesh = world.querySelector('#轿车').mesh
+                        entity.mesh = world.querySelector('#车-1').mesh
                         entity.meshOrientation = new GameQuaternion(0, 1, 0, 0).rotateY(-Math.PI / 2)
                         entity.player.runSpeed = 2.4
                         entity.player.walkSpeed = entity.player.runSpeed
@@ -41,10 +44,8 @@ world.onPress(async ({ entity, button }) => {
                                 entity.hurt(3)
                             }
                         })
-                    }
-
-                    else if (select.value == '货车') {
-
+                        break;
+                    case 1:
                         entity.maxHp = 20//20
                         entity.enableDamage = true
                         entity.player.canFly = false;
@@ -66,9 +67,8 @@ world.onPress(async ({ entity, button }) => {
                                 entity.hurt(3)
                             }
                         })
-                    }
-                    else if (select.value == '跑车') {
-
+                        break;
+                    case 2:
                         entity.maxHp = 10
                         entity.enableDamage = true
                         entity.player.canFly = false;
@@ -90,10 +90,8 @@ world.onPress(async ({ entity, button }) => {
                                 entity.hurt(3)
                             }
                         })
-
-                    }
-                    else if (select.value == '卡车') {
-
+                        break
+                    case 3:
                         entity.maxHp = 15
                         entity.enableDamage = true
                         entity.player.canFly = false;
@@ -115,9 +113,8 @@ world.onPress(async ({ entity, button }) => {
                                 entity.hurt(3)
                             }
                         })
-                    }
-                    else if (select.value == '法拉利F1') {
-
+                        break
+                    case 4:
                         entity.maxHp = 35
                         entity.enableDamage = true
                         entity.player.canFly = false;
@@ -139,9 +136,8 @@ world.onPress(async ({ entity, button }) => {
                                 entity.hurt(3)
                             }
                         })
-                    }
-                    else if (select.value == '无名红色赛车') {
-
+                        break
+                    case 5:
                         entity.maxHp = 20
                         entity.enableDamage = true
                         entity.player.canFly = false;
@@ -163,9 +159,8 @@ world.onPress(async ({ entity, button }) => {
                                 entity.hurt(3)
                             }
                         })
-                    }
-                    else if (select.value == '无名白色赛车') {
-
+                        break
+                    case 6:
                         entity.maxHp = 20
                         entity.enableDamage = true
                         entity.player.canFly = false;
@@ -187,7 +182,32 @@ world.onPress(async ({ entity, button }) => {
                                 entity.hurt(3)
                             }
                         })
-                    }
+                        break
+                    case 7:
+                        entity.maxHp = 20
+                        entity.enableDamage = true
+                        entity.player.canFly = false;
+                        entity.player.jumpPower = false
+                        entity.player.invisible = true;
+                        entity.mesh = world.querySelector('#轿车1-1').mesh
+                        entity.meshOrientation = new GameQuaternion(0, 1, 0, 0).rotateY(-Math.PI / 2)
+                        entity.player.runSpeed = 2
+                        entity.player.walkSpeed = entity.player.runSpeed
+                        entity.meshScale = new GameVector3(1 / 32, 1 / 32, 1 / 32);
+                        entity.player.runAcceleration = 2.5
+                        entity.player.spawnPoint = new GameVector3(5, 10, 115) //过会儿试下这里
+                        entity.player.forceRespawn()
+                        world.onVoxelContact(async ({ entity, voxel }) => {
+                            if (voxel == 185) {
+                                entity.hurt(1)
+                            }
+                            else if (voxel == 189) {
+                                entity.hurt(3)
+                            }
+                        })
+                        break
+                    default:
+                        break
                 }
             }
             if (select1.value == '下车') {
@@ -208,6 +228,8 @@ world.onPress(async ({ entity, button }) => {
         }
     }
 })
+
+//死亡代码
 world.onDie(async ({ entity }) => {
     if (!entity.isPlayer) return
     entity.player.canFly = true;
@@ -225,4 +247,5 @@ world.onDie(async ({ entity }) => {
     entity.player.walkSpeed = 0.22 //默认值
     entity.player.runAcceleration = 0.35   //控制玩家加速度
 })
+
 ```
