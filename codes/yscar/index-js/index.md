@@ -19,4 +19,5 @@ world.onPlayerJoin(({ entity }) => {
     entity.player.canFly = true;
     world.ambientSound.sample = 'audio/Wolves-Selena-Gomez_marshmello(bgm).mp3';//改变地图背景音乐，从地图运行开始循环播放。
 });
+
 ```
